@@ -12,15 +12,19 @@ def authenticate():
     client_id=os.getenv('SPOTIPY_CLIENT_ID'),
     client_secret=os.getenv('SPOTIPY_CLIENT_SECRET'),
     redirect_uri=os.getenv('SPOTIPY_REDIRECT_URI'),
+    cache_handler=None,
     scope=scope))
 
   # get access token
   token = sp.auth_manager.get_access_token(as_dict=False)
   print(token)
+
   results = sp.current_user_saved_tracks()
   for idx, item in enumerate(results['items']):
       track = item['track']
       print(idx, track['artists'][0]['name'], " – ", track['name'])
+  
+  return 'done'
 
 
 def test():
