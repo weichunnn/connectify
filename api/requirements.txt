@@ -1,0 +1,9 @@
+flask
+python-dotenv==0.21.0
+spotipy
+boto3==1.24.96
+scikit-learn==1.1.2
+pandas==1.5.1
+names
+flask_session
+flask-cors
