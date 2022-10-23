@@ -74,14 +74,6 @@ if __name__ == "__main__":
 
     # liked_tracks = sp.current_user_saved_tracks()
 
-    track_dict = {
-        "album_name": "Harry's House",
-        "artist_name": "Harry Styles",
-        "id": "51Zw1cKDgkad0CXv23HCMU",
-        "name": "Daylight",
-        "url": "https://open.spotify.com/track/51Zw1cKDgkad0CXv23HCMU",
-    }
-
     for res in top_tracks["items"]:
         # get song info
         track_dict = get_song_info(res)
@@ -96,3 +88,5 @@ if __name__ == "__main__":
         tracks_list.append(track_dict)
 
         print(f"Track: {track_dict['name']} by {track_dict['artist_name']} added")
+
+    
