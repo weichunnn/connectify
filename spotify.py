@@ -89,4 +89,6 @@ if __name__ == "__main__":
 
         print(f"Track: {track_dict['name']} by {track_dict['artist_name']} added")
 
+    pprint(users_dict)
+
     

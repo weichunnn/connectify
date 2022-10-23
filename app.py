@@ -17,6 +17,4 @@ def index():
 def ingest():
 
     spotify_db = connect_table("spotify")
-
-
     users_dict = json.loads(json.dumps(users_dict), parse_float=Decimal)
